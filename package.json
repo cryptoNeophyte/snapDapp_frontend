@@ -39,5 +39,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:2400"
+  "proxy": "https://snapdapp.herokuapp.com"
 }
