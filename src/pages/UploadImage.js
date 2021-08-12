@@ -87,12 +87,13 @@ function UploadImage({ snapDapp, address, imageCount, stateChange }) {
           .send({ from: address })
           .then((result) => {
             console.log('uploaded')
+            console.log('result ===> ', result)
             setLoader(false)
             resetForm()
+            history.push('/')
             alert(
               'image successfully uploaded! It may take 2-5 minutes to load your image on home page',
             )
-            history.push('/')
             stateChange() // state change is a dependency of useEffect at App.js. calling this will trigger useEffect and fetch new data
           })
           .catch((err) => {
@@ -108,7 +109,7 @@ function UploadImage({ snapDapp, address, imageCount, stateChange }) {
               },
             )
             // for avoiding focus error I am doing following things
-            ref.current.value = ''
+            // ref.current.value = ''
             setImageValue(null)
             setImageSource('')
             setImageName('No file chosen')
