@@ -88,9 +88,9 @@ function UploadImage({ snapDapp, address, imageCount, stateChange }) {
           .then((result) => {
             console.log('uploaded')
             console.log('result ===> ', result)
-            setLoader(false)
             resetForm()
             history.push('/')
+            setLoader(false)
             alert(
               'image successfully uploaded! It may take 2-5 minutes to load your image on home page',
             )
