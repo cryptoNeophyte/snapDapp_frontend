@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/loader.scss'
+import './styles/loader.css'
 
 function Loader({ bgc, color }) {
   // document.body.style.overflow = 'hidden'

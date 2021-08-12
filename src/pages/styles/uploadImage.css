@@ -1,0 +1,211 @@
+.upload-image-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.upload-image-page form {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  background-color: #ffffff93;
+  font-size: 18px;
+}
+
+.upload-image-page form .cat-image {
+  margin: 30px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-sizing: border-box;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.upload-image-page form .cat-image label {
+  width: 170px;
+  background-color: #9e579d;
+  color: white;
+  padding: 10px 15px;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-align: center;
+  border: 2px solid #9e579d;
+  border-radius: 0;
+}
+
+.upload-image-page form .cat-image label:hover {
+  background-color: #fff;
+  color: #9e579d;
+  border: 2px solid #9e579d;
+}
+
+.upload-image-page form .cat-image span {
+  color: rgba(0, 0, 0, 0.698);
+  font-size: 16px;
+}
+
+.upload-image-page form .cat-image #file-chosen {
+  margin-left: 0.3rem;
+  font-family: sans-serif;
+}
+
+.upload-image-page form label {
+  width: 100%;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 10px;
+}
+
+.upload-image-page form label input {
+  margin-left: 20px;
+}
+
+.upload-image-page form .checkbox {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.upload-image-page form .checkbox input {
+  margin-right: 10px;
+}
+
+.upload-image-page form input {
+  font-size: 18px;
+  height: 45px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.upload-image-page form input[type="file"] {
+  height: 40px;
+}
+
+.upload-image-page form .btns-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+}
+
+.upload-image-page form .btns-box button {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #e3cdf1;
+}
+
+.upload-image-page form .btns-box button:hover {
+  outline: 2px solid #c3a7eeb0;
+  background-color: #9e579d;
+  color: #fff;
+}
+
+.upload-image-page form .btns-box button:first-child {
+  background-color: #f3f7fd;
+}
+
+.upload-image-page form .btns-box button:first-child:hover {
+  background-color: #ffffff;
+  color: #7723f5b0;
+}
+
+.upload-image-page .selected-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 20px;
+}
+
+.upload-image-page .selected-img img {
+  width: 90%;
+  height: auto;
+  background-color: honeydew;
+}
+
+@media (max-width: 1300px) {
+  .upload-image-page form {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .upload-image-page .selected-img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .upload-image-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .upload-image-page .selected-img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0;
+  }
+  .upload-image-page .selected-img img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=uploadImage.css.map */

@@ -1,0 +1,112 @@
+.home-page {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.home-page .search-bar {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+.home-page .search-bar input, .home-page .search-bar button {
+  border: none;
+  margin: 4px 0;
+  outline: none;
+  padding: 8px 2px;
+  color: rgba(0, 0, 0, 0.705);
+}
+
+.home-page .search-bar input {
+  border-bottom: 2px solid rgba(130, 78, 199, 0.63);
+  width: 250px;
+  padding-left: 20px;
+}
+
+.home-page .search-bar button {
+  background-color: #fff;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(130, 78, 199, 0.63);
+  padding-right: 20px;
+}
+
+.home-page .home-page-images {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.home-page .home-page-images .image-card {
+  color: rgba(0, 0, 0, 0.705);
+  margin-top: 20px;
+}
+
+.home-page .home-page-images .image-card .image-card-with-info {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+}
+
+.home-page .home-page-images .image-card .image-card-with-info img {
+  cursor: pointer;
+}
+
+.home-page .home-page-images .image-card .image-card-with-info .image-card-info-area {
+  text-align: right;
+  width: 100%;
+}
+
+.home-page .home-page-images .image-card .image-card-with-info .image-card-info-area .tips-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home-page .home-page-images .image-card .image-card-with-info .image-card-info-area .tips-area .btns-area .tip-btn input {
+  width: 55px;
+  border: none;
+  outline: none;
+  color: rgba(0, 0, 0, 0.705);
+}
+
+.home-page .home-page-images .image-card .image-card-with-info .image-card-info-area .tips-area .btns-area .tip-btn button {
+  border: none;
+  outline: none;
+  background-color: #7b87f8;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 4px 10px;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+.home-page .home-page-images .image-card .image-card-with-info .image-card-info-area .tips-area .btns-area .tip-btn button:hover {
+  background-color: #fff;
+  color: #7b87f8;
+}
+
+.home-page .home-page-images .image-card .image-card-with-info:hover {
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=homePage.css.map */

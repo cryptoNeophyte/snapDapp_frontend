@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import axios from 'axios'
 import Loader from '../components/Loader'
-import './styles/uploadImage.scss'
+import './styles/uploadImage.css'
 import { useHistory } from 'react-router-dom'
 
 function UploadImage({ snapDapp, address, imageCount, stateChange }) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/minLoader.scss'
+import './styles/minLoader.css'
 
 function MinLoader() {
   return (

@@ -1,0 +1,190 @@
+.detail-page {
+  color: rgba(0, 0, 0, 0.705);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 50px;
+  width: 100%;
+}
+
+.detail-page .img-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.detail-page .img-info .img-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-bottom: 20px;
+}
+
+.detail-page .img-info .img-box img {
+  height: auto;
+  width: 100%;
+}
+
+.detail-page .img-info .info-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 20px 20px 20px;
+  text-align: justify;
+}
+
+.detail-page .img-info .info-box h3 {
+  color: #a2a8e6;
+  margin-bottom: 30px;
+}
+
+.detail-page .img-info .info-box p {
+  word-wrap: break-word;
+}
+
+.detail-page .img-info .info-box p span {
+  font-weight: 500;
+  color: #824ec7;
+}
+
+.detail-page .img-info .info-box .desc {
+  color: #3e5b81;
+}
+
+.detail-page .img-info .info-box input, .detail-page .img-info .info-box button {
+  border: none;
+  margin: 4px 0;
+  outline: none;
+  padding: 8px 2px;
+  color: rgba(0, 0, 0, 0.705);
+}
+
+.detail-page .img-info .info-box button {
+  padding: 10px 20px;
+  margin-left: 4px;
+  background-color: rgba(150, 91, 161, 0.808);
+  color: #fff;
+}
+
+.detail-page .img-info .info-box button:hover {
+  background-color: #fff;
+  color: #824ec7;
+  font-weight: 500;
+}
+
+.detail-page .img-info .info-box input {
+  width: 100px;
+  border-bottom: 1px solid #7b87f8;
+}
+
+.detail-page .search-orders {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.detail-page .search-orders .go-btn {
+  position: absolute;
+  left: 0;
+}
+
+.detail-page .search-orders input, .detail-page .search-orders button {
+  border: none;
+  margin: 4px 0;
+  outline: none;
+  padding: 8px 2px;
+  color: rgba(0, 0, 0, 0.705);
+}
+
+.detail-page .search-orders input {
+  border-bottom: 2px solid #824ec7;
+  width: 300px;
+  font-size: 14px;
+}
+
+.detail-page .search-orders button {
+  background-color: #fff;
+  cursor: pointer;
+  border-bottom: 2px solid #824ec7;
+  font-size: 14px;
+  color: #7b87f8;
+  font-weight: 700;
+}
+
+.detail-page .all-orders-area {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.detail-page .all-orders-area table {
+  width: 100%;
+}
+
+.detail-page .all-orders-area table tr, .detail-page .all-orders-area table th, .detail-page .all-orders-area table td {
+  border: 1px solid #824ec7;
+  padding: 10px;
+  text-align: center;
+}
+
+.detail-page .all-orders-area table tbody tr:hover {
+  background-color: rgba(239, 241, 251, 0.815);
+}
+
+.detail-page .all-orders-area table button {
+  border: none;
+  margin: 4px 0;
+  outline: none;
+  padding: 8px 2px;
+  color: rgba(0, 0, 0, 0.705);
+  background-color: transparent;
+  font-weight: 500;
+  color: #ee7676;
+}
+
+.detail-page .all-orders-area table button:hover {
+  color: #eb4e4e;
+}
+
+@media (max-width: 700px) {
+  .detail-page .img-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .detail-page .search-orders .go-btn {
+    position: relative;
+  }
+  .detail-page .all-orders-area {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .detail-page .all-orders-area table {
+    width: 100%;
+  }
+  .detail-page .all-orders-area table .address-td p {
+    word-wrap: break-word;
+    width: 150px;
+  }
+}
+/*# sourceMappingURL=imageDetail.css.map */

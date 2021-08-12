@@ -4,7 +4,7 @@ import { useHistory, useLocation, useParams } from 'react-router-dom'
 import MinLoader from '../components/MinLoader'
 // import ImageCard from '../components/ImageCard'
 
-import './styles/homePage.scss'
+import './styles/homePage.css'
 
 const LazyImg = React.lazy(() => import('../components/ImageCard'))
 

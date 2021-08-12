@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useHistory, useLocation } from 'react-router-dom'
 import Loader from '../components/Loader'
-import './styles/imageDetail.scss'
+import './styles/imageDetail.css'
 import axios from 'axios'
 
 function ImageDetailPage({ address, stateChange, snapDapp }) {
