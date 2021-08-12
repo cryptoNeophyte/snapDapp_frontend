@@ -10,6 +10,7 @@ import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import UploadImage from './pages/UploadImage'
 import ImageDetailPage from './pages/ImageDetailPage'
+import Loader from './components/Loader'
 
 function App() {
   const [loading, setLoader] = useState(true)
@@ -45,12 +46,13 @@ function App() {
       const web3 = provider
 
       const accounts = await web3.eth.getAccounts()
-      const account = accounts[0]
-      setCurrentAccount(account)
-      console.log('account', account)
 
+      if (accounts) {
+        const account = accounts[0]
+        setCurrentAccount(account)
+        console.log('account', account)
+      }
       setWeb3(web3)
-
       return web3
     } catch (err) {
       console.log(err)
@@ -79,6 +81,7 @@ function App() {
     try {
       setError('')
       setLoader(true)
+
       const web3 = await loadWeb3Account(window.web3)
 
       console.log('web3 ===> ', web3)
@@ -130,12 +133,15 @@ function App() {
         // fetching name of contract
         const name = await snapDapp.methods.name().call()
         setName(name)
+        setLoader(false)
       } else {
         setError('The smart contract is not deployed to current network!')
         window.alert('The smart contract is not deployed to current network!')
+        setLoader(false)
       }
     } catch (err) {
       console.log(err)
+      setLoader(false)
     }
   }
 
@@ -144,74 +150,83 @@ function App() {
     loadWeb3()
   }
 
-  if (hasEthereumAccount || !loading) {
+  console.log(images)
+
+  if (!loading) {
     return (
       <div className="App">
-        {error && <h2>{error}</h2>}
         <Navbar currentAccount={currentAccount} connect={Connect} />
 
-        <Switch>
-          <Route exact path="/">
-            <HomePage
-              snapDapp={contract}
-              address={currentAccount}
-              stateChange={stateChange}
-              images={images}
-            />
-          </Route>
-          <Route exact path="/uploaded">
-            <HomePage
-              snapDapp={contract}
-              address={currentAccount}
-              stateChange={stateChange}
-              images={images}
-            />
-          </Route>
-          <Route exact path="/my_images">
-            <HomePage
-              snapDapp={contract}
-              address={currentAccount}
-              stateChange={stateChange}
-              images={images}
-            />
-          </Route>
-          <Route exact path="/search/:id">
-            <HomePage
-              snapDapp={contract}
-              address={currentAccount}
-              stateChange={stateChange}
-              images={images}
-            />
-          </Route>
-          <Route exact path="/orders">
-            <HomePage
-              snapDapp={contract}
-              address={currentAccount}
-              stateChange={stateChange}
-              images={images}
-            />
-          </Route>
-          <Route exact path="/upload_image">
-            <UploadImage
-              address={currentAccount}
-              stateChange={stateChange}
-              imageCount={imageCount}
-              snapDapp={contract}
-            />
-          </Route>
-          <Route exact path="/image/:id">
-            <ImageDetailPage
-              address={currentAccount}
-              stateChange={stateChange}
-              snapDapp={contract}
-            />
-          </Route>
-          <Redirect to="/" />
-        </Switch>
+        {!hasEthereumAccount ? (
+          <h2>PLEASE INSTALL METAMASK OR OTHER ETHEREUM WALLET!</h2>
+        ) : (
+          <Switch>
+            <Route exact path="/">
+              <HomePage
+                snapDapp={contract}
+                address={currentAccount}
+                stateChange={stateChange}
+                images={images}
+              />
+            </Route>
+            <Route exact path="/uploaded">
+              <HomePage
+                snapDapp={contract}
+                address={currentAccount}
+                stateChange={stateChange}
+                images={images}
+              />
+            </Route>
+            <Route exact path="/my_images">
+              <HomePage
+                snapDapp={contract}
+                address={currentAccount}
+                stateChange={stateChange}
+                images={images}
+              />
+            </Route>
+            <Route exact path="/search/:id">
+              <HomePage
+                snapDapp={contract}
+                address={currentAccount}
+                stateChange={stateChange}
+                images={images}
+              />
+            </Route>
+            <Route exact path="/orders">
+              <HomePage
+                snapDapp={contract}
+                address={currentAccount}
+                stateChange={stateChange}
+                images={images}
+              />
+            </Route>
+            <Route exact path="/upload_image">
+              <UploadImage
+                address={currentAccount}
+                stateChange={stateChange}
+                imageCount={imageCount}
+                snapDapp={contract}
+              />
+            </Route>
+            <Route exact path="/image/:id">
+              <ImageDetailPage
+                address={currentAccount}
+                stateChange={stateChange}
+                snapDapp={contract}
+              />
+            </Route>
+            <Redirect to="/" />
+          </Switch>
+        )}
       </div>
     )
   } else {
-    return <h3>Loading...</h3>
+    return (
+      <div className="App">
+        <Loader />
+      </div>
+    )
   }
 }
 

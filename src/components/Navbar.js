@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Identicon from 'identicon.js'
 import { NavLink } from 'react-router-dom'
+import './styles/navbar.css'
 
 function Navbar({ currentAccount, connect }) {
+  const [open, toggle] = useState(false)
   function handleConnect() {
     connect()
   }
@@ -20,10 +22,15 @@ function Navbar({ currentAccount, connect }) {
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={() => toggle(!open)}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div
+          className="collapse navbar-collapse"
+          id="navbarSupportedContent"
+          style={{ display: open ? 'block' : 'none' }}
+        >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <NavLink to="/uploaded" className="nav-link active">
