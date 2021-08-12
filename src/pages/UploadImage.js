@@ -113,8 +113,8 @@ function UploadImage({ snapDapp, address, imageCount, stateChange }) {
             setImageValue(null)
             setImageSource('')
             setImageName('No file chosen')
+            setLoader(false)
           })
-        setLoader(false)
       } else {
         alert('ERROR!')
         setLoader(false)
