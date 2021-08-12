@@ -16,7 +16,7 @@ function HomePage({ images, address, snapDapp, stateChange }) {
   const [newImgs, setNewImgs] = useState(null)
   const [imageID, setImageID] = useState('')
 
-  const BASE_URL = process.env.REACT_APP_SERVER_URL
+  const BASE_URL = `${process.env.REACT_APP_SERVER_URL}/api/v1`
 
   useEffect(() => {
     if (address) {

@@ -15,7 +15,7 @@ function ImageDetailPage({ address, stateChange, snapDapp }) {
   const [searchedMessage, setSearchedMessage] = useState('No orders yet!')
   const [searched, setSearched] = useState(false)
 
-  const BASE_URL = process.env.REACT_APP_SERVER_URL
+  const BASE_URL = `${process.env.REACT_APP_SERVER_URL}/api/v1`
   const tip = 0.0001 // ETH
   const params = useParams()
 

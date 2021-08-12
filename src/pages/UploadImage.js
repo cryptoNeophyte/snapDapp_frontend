@@ -56,7 +56,7 @@ function UploadImage({ snapDapp, address, imageCount, stateChange }) {
 
       let imgId = Number(imageCount) + 1
 
-      const uploadURL = `${process.env.REACT_APP_SERVER_URL}/image/${address}`
+      const uploadURL = `${process.env.REACT_APP_SERVER_URL}/api/v1/image/${address}`
 
       console.log(uploadURL)
 
@@ -101,7 +101,7 @@ function UploadImage({ snapDapp, address, imageCount, stateChange }) {
             console.log(err)
             //if unsuccessful then delete this data from the backend server // TODO: will make it more secure
             axios.delete(
-              `${process.env.REACT_APP_SERVER_URL}/image/${imageMongooseId}`,
+              `${process.env.REACT_APP_SERVER_URL}/api/v1/image/${imageMongooseId}`,
               {
                 headers: {
                   authorization: `Bearer ${process.env.REACT_APP_CONTRACT_TOKEN}`,

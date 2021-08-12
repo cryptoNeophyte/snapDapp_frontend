@@ -32,7 +32,7 @@ function ImageCard({ src, image, address, snapDapp, stateChange }) {
   const [loading, setLoader] = useState(false)
   let imgId = image.id
   const history = useHistory()
-  const BASE_URL = process.env.REACT_APP_SERVER_URL
+  const BASE_URL = `${process.env.REACT_APP_SERVER_URL}/api/v1`
 
   function handleTip() {
     setLoader(true)
