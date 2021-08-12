@@ -35,7 +35,7 @@ function UploadImage({ snapDapp, address, imageCount, stateChange }) {
 
   function resetForm() {
     setDescription('')
-    ref.current.value = ''
+    // ref.current.value = ''
     setImageValue(null)
     setImageSource('')
     setImageName('No file chosen')
