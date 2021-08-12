@@ -137,7 +137,7 @@ function ImageDetailPage({ address, stateChange, snapDapp }) {
             let { ChangePriceOrSell } = result.events
             alert(ChangePriceOrSell.msg)
 
-            if (ChangePriceOrSell.msg.includes('is yours')) {
+            if (ChangePriceOrSell.msg.includes('Image sold')) {
               // TODO:
               // CHANGE OWNER OF THE IMAGE IN THE SERVER AS WELL
               const { data } = await axios.put(
