@@ -129,19 +129,20 @@ function ImageDetailPage({ address, stateChange, snapDapp }) {
         .then(async (result) => {
           console.log(result)
 
-          // now get this image // TODO: WILL DO THIS IN BLOCKCHAIN
-          let currentImage = await snapDapp.methods.images(imgId).call() // instead of this I will return address of newOwner in the emit itself
-          console.log('currentImage ==> ', currentImage)
+          if (
+            result.events &&
+            result.events.ChangePriceOrSell &&
+            result.events.ChangePriceOrSell.returnValues
+          ) {
+            const {
+              msg,
+              imgOwner,
+            } = result.events.ChangePriceOrSell.returnValues
+            alert(msg)
 
-          if (result.events && result.events.ChangePriceOrSell) {
-            let { ChangePriceOrSell } = result.events
-            alert(ChangePriceOrSell.msg)
-
-            if (ChangePriceOrSell.msg.includes('Image sold')) {
-              // TODO:
-              // CHANGE OWNER OF THE IMAGE IN THE SERVER AS WELL
+            if (msg === 'Image sold!') {
               const { data } = await axios.put(
-                `${BASE_URL}/image/changeOwner/${imgId}/${address}/${currentImage.imgOwner}`,
+                `${BASE_URL}/image/changeOwner/${imgId}/${address}/${imgOwner}`,
               )
               console.log(data)
             }
